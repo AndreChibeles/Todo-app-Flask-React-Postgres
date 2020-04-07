@@ -22,6 +22,13 @@ class Item():
 
     @classmethod
     def find_by_id(cls, id):
+        """Finds a row from the dB based on the id
+        
+        Keyword arguments:
+        id: id
+        Return: an object from type Item
+        """
+        
         query = "SELECT * FROM items WHERE item_id=%s"
         result = sql_query(query, (id,))
         print(result)
